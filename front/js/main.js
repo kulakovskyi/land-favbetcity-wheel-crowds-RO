@@ -1,40 +1,43 @@
 
 const playBtn = document.querySelector('.bonus__main-wheel-btn'),
       main = document.querySelector('.bonus__main'),
-      chips = document.querySelectorAll('.bonus__chip'),
-      popupChips = document.querySelectorAll('.bonus__overlay-chip'),
-      firstWoman = document.querySelector('.bonus__overlay-firstWoman'),
-      secondWoman = document.querySelector('.bonus__overlay-secondWoman'),
       wheel = document.querySelector('.bonus__main-wheel-reel'),
       overlay = document.querySelector('.bonus__overlay'),
       popupFirst = document.querySelector('.bonus__firstWin'),
       popupFirstBtn = document.querySelector('.bonus__firstWin-btn'),
       popupSecond = document.querySelector('.bonus__secondWin'),
       overflow = document.querySelector('body'),
-      video = document.querySelector('.bonus__main-video-bg'),
-      wrapper = document.querySelector('.bonus')
+      wrapper = document.querySelector('.bonus'),
+      wheelReel = document.querySelector('.bonus__main-wheel-reel'),
+      musicBtn = document.querySelector('.bonus__music'),
+      audio = document.querySelector('.audio')
 
-
-const bonusText = document.querySelector('.bonus__main-bubble');
-
-window.onload = videoSource(video, 'img/video.mp4', 'video/mp4');
-
-
-function videoSource(element, src, type) {
-    if(window.innerWidth > 1024) {
-        let source = document.createElement('source')
-        source.src = src
-        source.type = type
-        video.appendChild(source)
+musicBtn.addEventListener('click', ()=>{
+    if(musicBtn.classList.contains('on')){
+        musicOff()
+    } else {
+        musicOn()
     }
+})
+
+function musicOn(){
+    musicBtn.classList.add('on')
+    musicBtn.querySelector('img').setAttribute('src', 'img/music-on.svg')
+    audio.play()
+}
+
+function musicOff(){
+    musicBtn.classList.remove('on')
+    musicBtn.querySelector('img').setAttribute('src', 'img/music-off.svg')
+    audio.pause()
 }
 
 let triesCounter = 0
 
 playBtn.addEventListener('click', () => {
-
     if (triesCounter === 0) {
         runFirstRotation()
+        musicOn()
 
     } else {
         runSecondRotation()
@@ -55,16 +58,13 @@ function runFirstRotation() {
 function doAfterFirstRotation() {
     wheel.style.transform = 'rotate(992deg)'
     wheel.classList.remove('reel-rotation-first')
-    overlay.classList.add('win-tab')
-    overlay.classList.add('win-mob')
-    firstWoman.classList.remove('hide')
     displayPopup(popupFirst)
     wrapper.style.pointerEvents = 'auto'
     overflow.style.overflow = 'hidden'
     setTimeout(() => {
         playBtn.classList.add('pulse-btn')
         playBtn.style.cursor = 'pointer'
-        bonusText.style.display = "none"
+        wheelReel.classList.add('_secondRotate')
     }, 1200)
 }
 
@@ -81,36 +81,19 @@ function runSecondRotation() {
 }
 
 function doAfterSecondRotation() {
-    overlay.classList.add('win-tab')
-    overlay.classList.add('win-mob')
-    secondWoman.classList.remove('hide')
     displayPopup(popupSecond)
     wrapper.style.pointerEvents = 'auto'
 }
 
 
 popupFirstBtn.addEventListener('click', () => {
-    main.classList.remove('blur')
-    firstWoman.classList.add('hide')
-    chips.forEach(function (el) {
-        el.classList.remove('blur')
-    })
     overlay.classList.add('opacity-overlay')
     popupFirst.classList.add('hide')
     overflow.style.overflow = 'unset'
-    overlay.classList.remove('win-tab')
-    overlay.classList.remove('win-mob')
 })
 
 function displayPopup(popup) {
     overlay.classList.remove('opacity-overlay')
     popup.classList.remove('hide')
-    main.classList.add('blur')
-    chips.forEach(function (el) {
-        el.classList.add('blur')
-    })
-    popupChips.forEach(function (el) {
-        el.classList.remove('hide')
-    })
 }
 
