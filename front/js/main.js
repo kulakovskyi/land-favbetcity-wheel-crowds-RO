@@ -13,8 +13,6 @@ const playBtn = document.querySelector('.bonus__main-wheel-btn'),
       audio = document.querySelector('.audio'),
       bubbleText = document.querySelector('.bonus__main-woman-txt')
 
-audio.volume = '0';
-
 musicBtn.addEventListener('click', ()=>{
     if(musicBtn.classList.contains('on')){
         musicOff()
