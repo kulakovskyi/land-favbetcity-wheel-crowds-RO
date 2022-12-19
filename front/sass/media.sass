@@ -328,10 +328,128 @@
         picture
           height: 51vh
 
+@media screen and (max-width: 1260px) and (orientation: landscape)
+  .bonus
+    &__main
+      &-man
+        left: -285px
+
+@media screen and (max-width: 1210px) and (orientation: landscape)
+  .bonus
+    &__main
+      &-wheel
+        right: 186px
+      &-txt
+        transform: scale(0.6)
+      &-man
+        left: -254px
+
+@media screen and (max-width: 1210px) and (orientation: landscape) and (max-height: 600px)
+  .bonus
+    &__main
+      &-man
+        left: -149px
+    &__overlay
+      &-woman
+        height: 449px
+
+@media screen and (max-width: 1150px) and (orientation: landscape) and (max-height: 845px)
+  .bonus
+    &__main
+      &-wheel
+        transform: scale(0.73)
+
+@media screen and (max-width: 1070px) and (orientation: landscape)
+  .bonus
+    &__main
+      &-wheel
+        transform: scale(0.67)
+      &-woman
+        picture
+          right: 49px
+        &-txt
+          right: 124px
+      &-woman,
+      &-man
+        &-txt
+          transform: scale(0.8)
+
+@media screen and (max-width: 1040px) and (orientation: landscape) and (max-height: 770px)
+  .bonus
+    &__main
+      &-wheel
+        transform: scale(0.63)
+
+@media screen and (max-width: 1040px) and (orientation: landscape) and (max-height: 715px)
+  .bonus
+    &__main
+      &-wheel
+        transform: scale(0.59)
+      &-txt
+        transform: scale(0.55)
+        left: 60px
+      &-logo
+        width: 257px
+
+      &-woman,
+      &-man
+        &-txt
+          transform: scale(0.6)
+      &-woman
+        &-txt
+          right: 84px
+
+
+
+@media screen and (max-width: 975px) and (orientation: landscape)
+  .bonus
+    &__main
+      &-wheel
+        transform: scale(0.63)
+        right: 146px
+      &-logo
+        width: 253px
+      &-man,
+      &-woman
+        &-txt
+          transform: scale(0.7)
+      &-woman
+        &-txt
+          right: 88px
+          bottom: 47vh
+
+
+@media screen and (max-width: 910px) and (orientation: landscape)
+  .bonus
+    &__main
+      &-man
+        left: -284px
+      &-man,
+      &-woman
+         &-txt
+           transform: scale(0.7)
+      &-woman
+        &-txt
+          right: 97px
+          bottom: 47vh
+
+
 /*****************************************TABLET****************************************/
 
 @media screen and (max-width: 1040px) and (orientation: portrait)
   .bonus
+    &__overlay
+      &-woman
+        display: none
+    &__firstWin,
+    &__secondWin
+      &-info
+        transform: scale(1.1)
+    &__salut
+      &-fourth
+        top: 270px
+      &-three
+        top: 188px
     &__music
       transform: scale(1)
       right: 60px
@@ -350,7 +468,6 @@
         line-height: 16px
         br
           display: none
-
     &__main
       &-txt
         transform: scale(1) translateX(-50%)
@@ -367,4 +484,94 @@
         span
           font-size: 62px
           line-height: 70px
+      &-wrapper
+        margin: 0
+        justify-content: center
+      &-wheel
+        transform-origin: bottom center
+        right: auto
+        transform: scale(0.9)
+      &-man
+        position: absolute
+        picture
+          height: 380px
+        &-txt
+          transform: scale(0.8)
+          bottom: 250px
+          left: 318px
+      &-woman
+        picture
+          height: 560px
+          right: 13px
+        &-txt
+          width: 202px
+          padding: 54px 13px 45px 43px
+          transform: scale(0.8)
+          bottom: 230px
+          right: 155px
+          z-index: 5
+          background: url("../img/babble-tab.png") no-repeat 0 0/contain
+
+@media screen and (max-width: 840px) and (orientation: portrait) and (max-height: 1150px)
+  .bonus
+    &__main
+      &-wheel
+        transform: scale(0.8)
+      &-txt
+        transform: scale(0.9) translateX(-50%)
+      &-man
+        picture
+          height: 310px
+          left: 223px
+        &-txt
+          transform: scale(0.7)
+          bottom: 190px
+          left: 298px
+      &-woman
+        picture
+          height: 458px
+        &-txt
+          transform: scale(0.7)
+          bottom: 163px
+          right: 113px
+
+@media screen and (max-width: 840px) and (orientation: portrait) and (max-height: 1055px)
+  .bonus
+    &__main
+      &-wheel
+        transform: scale(0.7)
+
+
+@media screen and (max-width: 770px) and (orientation: portrait)
+  .bonus
+    &__main
+      &-logo
+        width: 310px
+      &-txt
+        transform: scale(0.8) translateX(-50%)
+        top: 150px
+
+@media screen and (max-width: 770px) and (orientation: portrait) and (max-height: 975px)
+  .bonus
+    &__main
+      &-man
+        picture
+          height: 270px
+        &-txt
+          transform: scale(0.6)
+          bottom: 150px
+          left: 268px
+      &-woman
+        picture
+          height: 408px
+        &-txt
+          transform: scale(0.6)
+          bottom: 138px
+          right: 93px
+
+@media screen and (max-width: 770px) and (orientation: portrait) and (max-height: 935px)
+  .bonus
+    &__main
+      &-wheel
+        transform: scale(0.63)
 
