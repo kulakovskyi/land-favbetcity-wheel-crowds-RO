@@ -10,7 +10,10 @@ const playBtn = document.querySelector('.bonus__main-wheel-btn'),
       wrapper = document.querySelector('.bonus'),
       wheelReel = document.querySelector('.bonus__main-wheel-reel'),
       musicBtn = document.querySelector('.bonus__music'),
-      audio = document.querySelector('.audio')
+      audio = document.querySelector('.audio'),
+      bubbleText = document.querySelector('.bonus__main-woman-txt')
+
+audio.volume = '0';
 
 musicBtn.addEventListener('click', ()=>{
     if(musicBtn.classList.contains('on')){
@@ -33,11 +36,13 @@ function musicOff(){
 }
 
 let triesCounter = 0
+let textAfterRotate = 'Vrei un Bonus? Ai 1 încercări';
 
 playBtn.addEventListener('click', () => {
     if (triesCounter === 0) {
         runFirstRotation()
         musicOn()
+        bubbleText.innerHTML = textAfterRotate;
 
     } else {
         runSecondRotation()

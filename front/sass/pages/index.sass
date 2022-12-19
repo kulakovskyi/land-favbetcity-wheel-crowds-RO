@@ -450,6 +450,10 @@ body
         color: $blue
         letter-spacing: 0.03em
         text-transform: uppercase
+        opacity: 0
+        animation: 3.5s bulbs-opacityEnd ease
+        animation-fill-mode: forwards
+        animation-delay: 1s
       picture
         height: 63.4vh
         position: absolute
@@ -460,6 +464,7 @@ body
           height: 100%
     &-man
       flex: 1 1 auto
+      pointer-events: none
       &-txt
         padding: 55px 18px 9px 32px
         position: absolute
@@ -476,12 +481,16 @@ body
         color: $blue
         letter-spacing: 0.03em
         text-transform: uppercase
+        opacity: 0
+        animation: 3.5s bulbs-opacityEnd ease
+        animation-fill-mode: forwards
       picture
         height: 54vh
         position: absolute
         bottom: 0
         left: 203px
         z-index: 4
+        width: 800px
         img
           height: 100%
   &__footer
@@ -606,6 +615,14 @@ body
     opacity: 1
   100%
     opacity: 0
+
+@keyframes bulbs-opacityEnd
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+
 
 @keyframes lamps-light
   0%
