@@ -800,6 +800,21 @@
 
 @media screen and (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
   .bonus
+    &__overlay
+      &-woman
+        display: none
+    &__firstWin,
+    &__secondWin
+      &-info
+        transform: scale(0.7)
+        margin: 10px 0 0 0
+    &__salut
+      &-one,
+      &-two,
+      &-three,
+      &-fourth
+        width: 120px
+        height: 120px
     &__main
       &-logo
         width: 146px
@@ -807,7 +822,9 @@
         transform: scale(0.4)
         left: 30px
         top: 85px
+        white-space: nowrap
       &-man
+        left: -142px
         picture
           left: 143px
           height: 200px
@@ -815,6 +832,15 @@
           transform: scale(0.4)
           bottom: 80px
           left: 153px
+
+      &-woman
+        picture
+          transform: scale(-1 , 1)
+          height: 290px
+        &-txt
+          transform: scale(0.4)
+          right: 78px
+          bottom: 150px
       &-wheel
         transform: scale(0.4)
         right: auto
@@ -834,4 +860,89 @@
       transform: scale(0.5)
       bottom: 15px
       right: 15px
+
+@media screen and (max-width: 920px) and (orientation: landscape) and (max-height: 400px)
+  .bonus
+    &__firstWin,
+    &__secondWin
+      &-info
+        transform: scale(0.65)
+    &__main
+      &-wheel
+        transform: scale(0.35)
+        right: auto
+        left: -348px
+      &-man
+        transform-origin: bottom center
+        transform: scale(0.9)
+
+@media screen and (max-width: 920px) and (orientation: landscape) and (max-height: 375px)
+  .bonus
+    &__main
+      &-man
+        transform: scale(0.8)
+        left: -115px
+      &-txt
+        transform: scale(0.35)
+      &-woman
+        picture
+          height: 230px
+        &-txt
+          right: 58px
+          bottom: 110px
+
+@media screen and (max-width: 920px) and (orientation: landscape) and (max-height: 350px)
+  .bonus
+    &__firstWin,
+    &__secondWin
+      &-info
+        transform: scale(0.6)
+    &__main
+      &-wheel
+        transform: scale(0.3)
+        left: -396px
+
+@media screen and (max-width: 920px) and (orientation: landscape) and (max-height: 338px)
+  .bonus
+    &__firstWin,
+    &__secondWin
+      &-info
+        transform: scale(0.55)
+    &__main
+      &-txt
+        top: 60px
+
+@media screen and (max-width: 920px) and (orientation: landscape) and (max-height: 310px)
+  .bonus
+    &__firstWin,
+    &__secondWin
+      &-info
+        transform: scale(0.5)
+    &__footer
+      transform: scale(0.35)
+    &__music
+      transform: scale(0.4)
+    &__main
+      &-wheel
+        transform: scale(0.27)
+      &-man
+        transform: scale(0.66)
+      &-txt
+        transform: scale(0.3)
+      &-woman
+        picture
+          height: 190px
+        &-txt
+          transform: scale(0.3)
+          right: 38px
+          bottom: 70px
+
+@media screen and (max-width: 570px) and (orientation: landscape)
+  .bonus
+    &__main
+      &-wheel
+        transform: scale(0.28)
+        right: auto
+        left: -452px
+
 
