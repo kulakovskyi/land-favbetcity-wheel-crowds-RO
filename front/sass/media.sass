@@ -87,6 +87,9 @@
       &-woman
         &-txt
           transform: scale(0.9)
+      &-man
+        &-txt
+          left: 382px
       &-woman
         &-txt
           bottom: 56vh
@@ -98,16 +101,16 @@
       &-man
         &-txt
           bottom: 35vh
-          left: 411px
+          left: 382px
 
 @media screen and (max-width: 1845px)
   .bonus
     &__main
       &-txt
-        left: 66px
+        left: 196px
       &-man
         position: relative
-        left: -139px
+        left: -54px
 
 @media screen and (max-width: 1750px)
   .bonus
@@ -126,16 +129,27 @@
 
 @media screen and (max-width: 1750px) and (max-height: 900px)
   .bonus
+    &__footer
+      bottom: 30px
+      left: 40px
+      transform-origin: bottom left
+      transform: scale(0.9)
+    &__music
+      right: 40px
+      bottom: 30px
     &__main
       &-logo
         width: 382px
       &-txt
         top: 164px
+        left: 196px
         transform: scale(0.8)
       &-wheel
         transform: scale(0.8)
       &-man
-        left: -189px
+        left: -54px
+        &-txt
+          left: 362px
     &__firstWin,
     &__secondWin
       &-info
@@ -155,7 +169,7 @@
         &-txt
           transform: scale(0.75)
           bottom: 35vh
-          left: 362px
+          left: 332px
       &-woman
         &-txt
           transform: scale(0.75)
@@ -192,6 +206,29 @@
           bottom: 34vh
           left: 322px
 
+@media screen and (max-width: 1560px)
+  .bonus
+    &__main
+      &-txt
+        left: 116px
+      &-man
+        left: -144px
+
+@media screen and (max-width: 1560px) and (max-height: 820px)
+  .bonus
+    &__main
+      &-txt
+        left: 186px
+      &-man
+        left: -54px
+
+
+@media screen and (max-width: 1560px) and (max-height: 760px)
+  .bonus
+    &__overlay
+      &-woman
+        height: 485px
+
 @media screen and (max-width: 1460px)
   .bonus
     &__salut
@@ -215,7 +252,7 @@
       &-man
         &-txt
           bottom: 37vh
-          left: 378px
+          left: 355px
       &-woman
         &-txt
           bottom: 55vh
@@ -227,9 +264,11 @@
     &__main
       &-txt
         top: 133px
+        left: 146px
       &-man
+        left: -114px
         &-txt
-          left: 357px
+          left: 327px
       &-woman
         &-txt
           bottom: 54vh
@@ -327,6 +366,29 @@
           left: 273px
         picture
           height: 51vh
+
+@media screen and (max-width: 1300px) and (orientation: landscape)
+  .bonus
+    &__main
+      &-txt
+        left: 63px
+      &-man
+        left: -213px
+
+@media screen and (max-width: 1300px) and (orientation: landscape) and (max-height: 680px)
+  .bonus
+    &__main
+      &-txt
+        left: 143px
+      &-man
+        left: -133px
+
+@media screen and (max-width: 1300px) and (orientation: landscape) and (max-height: 665px)
+  .bonus
+    &__footer
+      transform: scale(0.7)
+      bottom: 20px
+      left: 20px
 
 @media screen and (max-width: 1260px) and (orientation: landscape)
   .bonus
