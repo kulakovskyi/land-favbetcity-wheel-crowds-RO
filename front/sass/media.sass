@@ -8,8 +8,9 @@
     &__overlay
       &-woman,
       &-man
+        height: 70%
         transform-origin: bottom left
-        transform: translateX(60%) scale(1.1)
+        transform: translateX(120%) scale(1.1)
 
 @media screen and (min-width: 2100px) and (max-height: 1100px)
   .bonus
@@ -31,7 +32,8 @@
       &-woman,
       &-man
         transform-origin: bottom left
-        transform: translateX(60%) scale(1)
+        transform: translateX(128%) scale(1)
+        height: 79%
 
 @media screen and (min-width: 2100px) and (max-height: 1020px)
   .bonus
@@ -71,7 +73,8 @@
       &-woman,
       &-man
         transform-origin: bottom left
-        transform: translateX(60%) scale(1.2)
+        transform: translateX(120%) scale(1.2)
+        height: 66%
 
 @media screen and (max-width: 1920px) and (max-height: 1045px)
   .bonus
@@ -94,6 +97,49 @@
         &-txt
           bottom: 56vh
           right: 194px
+
+@media screen and (max-width: 1920px) and (max-height: 975px)
+  .bonus
+    &__overlay
+      &-woman
+        transform: translateX(124%)
+        height: 83%
+
+@media screen and (max-width: 1920px) and (max-height: 900px)
+  .bonus
+    &__overlay
+      &-woman
+        transform: translateX(115%)
+        height: 80%
+
+@media screen and (max-width: 1920px) and (max-height: 845px)
+  .bonus
+    &__overlay
+      &-woman
+        transform: translateX(119%)
+        height: 81%
+
+@media screen and (max-width: 1920px) and (max-height: 760px)
+  .bonus
+    &__overlay
+      &-woman
+        transform: translateX(126%)
+        height: 81%
+
+@media screen and (max-width: 1920px) and (max-height: 663px)
+  .bonus
+    &__overlay
+      &-woman
+        transform: translateX(126%)
+        height: 86%
+
+
+@media screen and (max-width: 1920px) and (max-height: 595px)
+  .bonus
+    &__overlay
+      &-woman
+        transform: translateX(136%)
+        height: 86%
 
 @media screen and (max-width: 1920px) and (max-height: 975px)
   .bonus
@@ -154,9 +200,7 @@
     &__secondWin
       &-info
         transform: scale(1)
-    &__overlay
-      &-woman
-        height: 628px
+
 
 @media screen and (max-width: 1750px) and (max-height: 820px)
   .bonus
@@ -176,9 +220,7 @@
           bottom: 52vh
           right: 156px
           z-index: 5
-    &__overlay
-      &-woman
-        height: 565px
+
 
 @media screen and (max-width: 1750px) and (max-height: 770px)
   .bonus
@@ -223,11 +265,11 @@
         left: -54px
 
 
-@media screen and (max-width: 1560px) and (max-height: 760px)
-  .bonus
-    &__overlay
-      &-woman
-        height: 485px
+//@media screen and (max-width: 1560px) and (max-height: 760px)
+//  .bonus
+//    &__overlay
+//      &-woman
+//        height: 485px
 
 @media screen and (max-width: 1460px)
   .bonus
@@ -411,9 +453,7 @@
     &__main
       &-man
         left: -149px
-    &__overlay
-      &-woman
-        height: 449px
+
 
 @media screen and (max-width: 1150px) and (orientation: landscape) and (max-height: 845px)
   .bonus
@@ -502,7 +542,13 @@
   .bonus
     &__overlay
       &-woman
-        display: none
+        z-index: 0
+        bottom: auto
+        top: 0
+        height: 50%
+        right: 50%
+        transform: translateX(50%)
+        //width: 640px
     &__firstWin,
     &__secondWin
       &-info
@@ -755,14 +801,26 @@
         transform: scale(0.43)
         top: -87px
 
+@media screen and (max-width: 380px) and (orientation: portrait) and (min-height: 800px)
+  .bonus
+    &__overlay
+      &-woman
+        width: 237px !important
+
 @media screen and (max-width: 660px) and (orientation: portrait) and (min-height: 820px)
   .bonus
+    &__overlay
+      &-woman
+        width: 250px
     &__main
       &-wheel
         top: -183px
 
 @media screen and (max-width: 660px) and (orientation: portrait) and (min-height: 830px)
   .bonus
+    &__overlay
+      &-woman
+        width: 240px !important
     &__main
       &-wheel
         top: -186px
@@ -779,12 +837,29 @@
       &-wheel
         top: -206px
 
+@media screen and (max-width: 395px) and (orientation: portrait)
+  .bonus
+    &__overlay
+      &-woman
+        width: 210px
+
+@media screen and (max-width: 395px) and (orientation: portrait) and (max-height: 670px)
+  .bonus
+    &__overlay
+      &-woman
+        width: 190px
+
 @media screen and (max-width: 380px) and (orientation: portrait)
   .bonus
+    &__overlay
+      &-woman
+        width: 160px
     &__firstWin,
     &__secondWin
       &-info
         transform: scale(0.75)
+
+
 
 @media screen and (max-width: 380px) and (orientation: portrait) and (max-height: 560px)
   .bonus
@@ -799,6 +874,12 @@
       &-wheel
         transform: scale(0.35)
         top: -65px
+
+@media screen and (max-width: 380px) and (orientation: portrait) and (min-height: 600px)
+  .bonus
+    &__overlay
+      &-woman
+        width: 190px
 
 @media screen and (max-width: 370px) and (orientation: portrait)
   .bonus
@@ -829,14 +910,32 @@
           bottom: 47px
           right: 81px
 
+@media screen and (max-width: 360px) and (orientation: portrait)
+  .bonus
+    &__overlay
+      &-woman
+        width: 168px
+
+@media screen and (max-width: 360px) and (orientation: portrait) and (min-height: 700px)
+  .bonus
+    &__overlay
+      &-woman
+        width: 207px
+
 @media screen and (max-width: 360px) and (orientation: portrait) and (max-height: 595px)
   .bonus
+    &__overlay
+      &-woman
+        width: 168px
     &__main
       &-wheel
         transform: scale(0.38)
 
 @media screen and (max-width: 335px) and (orientation: portrait)
   .bonus
+    &__overlay
+      &-woman
+        width: 183px
     &__firstWin,
     &__secondWin
       &-info
@@ -853,6 +952,9 @@
 
 @media screen and (max-width: 335px) and (orientation: portrait) and (max-height: 580px)
   .bonus
+    &__overlay
+      &-woman
+        width: 163px
     &__main
       &-wheel
         top: -55px
@@ -870,7 +972,9 @@
   .bonus
     &__overlay
       &-woman
-        display: none
+        transform: translateX(136%)
+        height: 96%
+        bottom: -50px
     &__firstWin,
     &__secondWin
       &-info
