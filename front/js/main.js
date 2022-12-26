@@ -11,9 +11,13 @@ const playBtn = document.querySelector('.bonus__main-wheel-btn'),
       wheelReel = document.querySelector('.bonus__main-wheel-reel'),
       musicBtn = document.querySelector('.bonus__music'),
       audio = document.querySelector('.audio'),
-      bubbleText = document.querySelector('.bonus__main-woman-txt')
+      bubbleText = document.querySelector('.bonus__main-woman-txt'),
+      audioFireworks = document.querySelector('.audio-fireworks'),
+      audioWheel = document.querySelector('.audio-wheel'),
+      audioWin = document.querySelector('.audio-coin')
 
-audio.volume = '0';
+audio.volume = '0.4'
+audioFireworks.volume= '0.5'
 
 musicBtn.addEventListener('click', ()=>{
     if(musicBtn.classList.contains('on')){
@@ -27,12 +31,14 @@ function musicOn(){
     musicBtn.classList.add('on')
     musicBtn.querySelector('img').setAttribute('src', 'img/music-on.svg')
     audio.play()
+    audioFireworks.play()
 }
 
 function musicOff(){
     musicBtn.classList.remove('on')
     musicBtn.querySelector('img').setAttribute('src', 'img/music-off.svg')
     audio.pause()
+    audioFireworks.pause()
 }
 
 let triesCounter = 0
@@ -54,6 +60,7 @@ function runFirstRotation() {
     playBtn.classList.remove('pulse-btn')
     playBtn.style.cursor = 'default'
     wrapper.style.pointerEvents = 'none'
+    audioWheel.play()
     setTimeout(() => {
         doAfterFirstRotation()
     }, 6000)
@@ -79,6 +86,7 @@ function runSecondRotation() {
     playBtn.style.cursor = 'default'
     overflow.style.overflow = 'hidden'
     wrapper.style.pointerEvents = 'none'
+    audioWheel.play()
     setTimeout(() => {
         doAfterSecondRotation()
     }, 6000)
@@ -100,5 +108,6 @@ popupFirstBtn.addEventListener('click', () => {
 function displayPopup(popup) {
     overlay.classList.remove('opacity-overlay')
     popup.classList.remove('hide')
+    audioWin.play()
 }
 
