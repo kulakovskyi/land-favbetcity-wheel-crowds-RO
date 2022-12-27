@@ -16,11 +16,9 @@ const playBtn = document.querySelector('.bonus__main-wheel-btn'),
       audioWheel = document.querySelector('.audio-wheel'),
       audioWin = document.querySelector('.audio-coin')
 
-// audio.volume = '0.4'
-// audioFireworks.volume= '0.5'
+audio.volume = '0.4'
+audioFireworks.volume= '0.5'
 
-audio.volume = '0'
-audioFireworks.volume= '0'
 
 musicBtn.addEventListener('click', ()=>{
     if(musicBtn.classList.contains('on')){
